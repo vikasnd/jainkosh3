@@ -1,0 +1,55 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/jainkosh_orange">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="16dp" />
+
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintBottom_toTopOf="@id/btnMenu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button android:id="@+id/btnVideos" android:text="🎥 Videos" android:textColor="@color/white" style="@style/Widget.AppCompat.Button.Colored"/>
+        <Button android:id="@+id/btnAudio" android:text="🎧 Audio" android:textColor="@color/white" style="@style/Widget.AppCompat.Button.Colored"/>
+        <Button android:id="@+id/btnLiterature" android:text="📖 Literature" android:textColor="@color/white" style="@style/Widget.AppCompat.Button.Colored"/>
+        <Button android:id="@+id/btnStudy" android:text="📚 Study Material" android:textColor="@color/white" style="@style/Widget.AppCompat.Button.Colored"/>
+        <Button android:id="@+id/btnClass" android:text="🧘 Online Class" android:textColor="@color/white" style="@style/Widget.AppCompat.Button.Colored"/>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    
+    <Button
+        android:id="@+id/btnMenu"
+        android:text="☰ Menu"
+        android:textColor="@color/jainkosh_orange"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="30dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
